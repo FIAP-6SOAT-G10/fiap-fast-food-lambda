@@ -1,7 +1,10 @@
-import http from 'http';
+var http = require('http');
 
-export const loadUserByUsername = async (event) => {
-  return init(event.cpf);
+module.exports.login = async (event) => {
+    let rawBody = JSON.stringify(event.body);
+    let body = JSON.parse(rawBody);
+    let username = JSON.parse(body).username;
+    return init(username);
 }
 
 function init(username) {
