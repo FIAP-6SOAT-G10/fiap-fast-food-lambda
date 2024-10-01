@@ -72,7 +72,7 @@ const postData = (url, postData) => {
 };
 
 const callFetchPublicData = async (username) => {
-  const url = `http://a5fbfea3b06294a10a1d14ae213e9f0b-909825154.us-east-1.elb.amazonaws.com/api/clientes?cpf=${username}`;
+  const url = `http://a0314005a31f64ebc83c8073f68bc385-1698560935.us-east-1.elb.amazonaws.com/api/clientes?cpf=${username}`;
   try {
     return await fetchPublicData(url);
   } catch (error) {
